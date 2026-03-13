@@ -10,7 +10,7 @@ plugins {
     id ("com.gradle.plugin-publish")  
     id ("maven-publish") // Add version
     id ("java-gradle-plugin")
-    id ("signing")
+  //  id ("signing")
    // id("com.vanniktech.maven.publish")
     
 }
@@ -57,7 +57,7 @@ publishing {
             // Maven coordinates: groupId:artifactId:version
               groupId = "io.github.onedeba7"           // Your group ID
               artifactId = "gradle-github-plugin"                  // Your artifact ID
-              version = "1.0.0-SNAPSHOT"                         // Library version
+              version = "1.0.0"                         // Library version
 
             
                 from(components["java"])
@@ -103,12 +103,12 @@ publishing {
         }
     }
 }
-
+/*
 signing {
     sign(publishing.publications["release"])
 }
 
 
-
+*/
 
 
