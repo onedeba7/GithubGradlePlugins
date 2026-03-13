@@ -14,6 +14,8 @@ plugins {
    // id("com.vanniktech.maven.publish")
     
 }
+version = "1.0.0"
+group = "io.github.onedeba7"
 
 dependencies {
     implementation(gradleApi())
@@ -22,10 +24,19 @@ dependencies {
     implementation("org.zeroturnaround:zt-zip:1.8")
     testImplementation("junit:junit:4.11")
 }
+java {
+    withJavadocJar()
+    withSourcesJar()
+    
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
 
 
-version = "1.0.0"
-group = "io.github.onedeba7"
 //artifact = "gradle-github-plugin"
 
 
